@@ -1,0 +1,20 @@
+{
+  "name": "fm-monorepo-poc",
+  "version": "1.0.0",
+  "description": "PoC in js, ts, react, redux for Webpack Federated Modules and monorepo project structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmy-james/fm-monorepo-poc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimmy-james/fm-monorepo-poc/issues"
+  },
+  "homepage": "https://github.com/jimmy-james/fm-monorepo-poc#readme"
+}
