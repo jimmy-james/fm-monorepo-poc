@@ -3,18 +3,50 @@
   "version": "1.0.0",
   "description": "PoC in js, ts, react, redux for Webpack Federated Modules and monorepo project structure",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jimmy-james/fm-monorepo-poc.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "James Kim <mrjimbot@gmail.com",
   "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "bugs": {
     "url": "https://github.com/jimmy-james/fm-monorepo-poc/issues"
   },
-  "homepage": "https://github.com/jimmy-james/fm-monorepo-poc#readme"
+  "homepage": "https://github.com/jimmy-james/fm-monorepo-poc#readme",
+  "scripts": {
+    "start": "scripty",
+    "dev": "scripty",
+    "build": "scripty",
+    "clean": "scripty",
+    "lint": "scripty",
+    "test": "scripty"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "@microsoft/api-extractor": "^7.11.2",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "commitlint": "^11.0.0",
+    "eslint": "^7.11.0",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
+    "rimraf": "^3.0.2",
+    "scripty": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
 }
