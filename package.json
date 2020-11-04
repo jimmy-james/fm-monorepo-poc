@@ -41,6 +41,7 @@
     "husky": "^4.3.0",
     "lerna": "^3.22.1",
     "lerna-changelog": "^1.0.1",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "scripty": "^2.0.0"
   },
