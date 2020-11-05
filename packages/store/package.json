@@ -1,12 +1,13 @@
 {
-  "name": "@jimmy-james/store",
-  "version": "0.2.0",
+  "name": "@nextgen/store",
+  "version": "0.3.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "build": "scripty",
     "lint": "scripty",
     "clean": "rimraf dist *.tsbuildinfo",
     "test": "scripty"

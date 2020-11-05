@@ -1,3 +1,0 @@
-export const START_API_CALL = 'START_API_CALL';
-export const API_CALL_FAILURE = 'API_CALL_FAILURE';
-export const API_CALL_ENDED = 'API_CALL_ENDED';
