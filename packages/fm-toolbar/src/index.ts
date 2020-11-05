@@ -1,2 +1,2 @@
-import('./bootstrap');
-export {};
+void import('./bootstrap');
+// export {};

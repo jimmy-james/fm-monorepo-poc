@@ -3,5 +3,5 @@
   "files": [],
   /* tsc build everything in packages */
   // each part must have composite:true
-  "references": [{ "path": "assessment-engine" }, { "path": "item-renderer" }]
+  "references": [{ "path": "fm-assessment-engine" }, { "path": "fm-item-renderer" }, { "path": "fm-toolbar" }]
 }

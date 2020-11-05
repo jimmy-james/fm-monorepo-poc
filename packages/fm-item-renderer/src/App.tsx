@@ -2,7 +2,7 @@
 import React, { ReactElement } from 'react';
 
 const App: React.FC = (): ReactElement => {
-  return <>RENDERER</>;
+  return <>HELLO RENDERER</>;
 };
 
 export default App;

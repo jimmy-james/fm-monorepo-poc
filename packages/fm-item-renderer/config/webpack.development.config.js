@@ -100,6 +100,22 @@ module.exports = {
                     eager: true,
                     singleton: true,
                 },
+                "@coreym/benchmark": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@emotion/core": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@emotion/styled": {
+                    eager: true,
+                    singleton: true,
+                },
+                "emotion-theming": {
+                    eager: true,
+                    singleton: true,
+                },
             }
         }),
         new webpack.EnvironmentPlugin({

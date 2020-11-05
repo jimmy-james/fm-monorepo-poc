@@ -10,7 +10,7 @@
     "lint": "scripty",
     "clean": "rimraf dist *.tsbuildinfo",
     "build": "webpack --config ./config/webpack.config.js",
-    "dev": "webpack serve --config ./config/webpack.development.config.js --hot",
+    "dev": "scripty",
     "test": "scripty"
   },
   "devDependencies": {
@@ -37,8 +37,12 @@
   },
   "dependencies": {
     "@coreym/benchmark": "^0.1.22",
+    "@emotion/core": "^10.1.1",
+    "@emotion/styled": "^10.0.27",
+    "bundle-loader": "^0.5.6",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
+    "emotion-theming": "^10.0.27",
     "path": "^0.12.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

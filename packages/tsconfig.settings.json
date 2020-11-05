@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "esnext",
     "types": [],
     "sourceMap": true,
     "target": "ES2018",

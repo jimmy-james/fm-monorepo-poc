@@ -84,6 +84,7 @@ module.exports = {
             // injects parameters into the index.ejs template file
             templateParameters: {
                 itemRenderer: 'http://localhost:9002/remoteEntry.js',
+                toolbar: 'http://localhost:9003/remoteEntry.js',
             }
         }),
         new ModuleFederationPlugin({
@@ -102,6 +103,7 @@ module.exports = {
             remotes: {
                 // module: path to module.
                 ItemRendererApp: 'ItemRendererApp',
+                ToolbarApp: 'ToolbarApp',
             },
             shared: {
                 react: {
@@ -109,6 +111,22 @@ module.exports = {
                     singleton: true,
                 },
                 "react-dom": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@coreym/benchmark": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@emotion/core": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@emotion/styled": {
+                    eager: true,
+                    singleton: true,
+                },
+                "emotion-theming": {
                     eager: true,
                     singleton: true,
                 },

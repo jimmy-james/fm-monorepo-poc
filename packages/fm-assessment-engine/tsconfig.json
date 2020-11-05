@@ -2,14 +2,6 @@
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
     "composite": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "outDir": "dist",
     "rootDir": "src",
     "jsx": "react"

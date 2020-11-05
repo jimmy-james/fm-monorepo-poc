@@ -21,7 +21,7 @@ module.exports = {
     mode: 'development',
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),
-        port: 9002,
+        port: 9003,
         historyApiFallback: {
             // specify this HTML or it defaults to index.html
             index: '/toolbar.html'
@@ -97,6 +97,22 @@ module.exports = {
                     singleton: true,
                 },
                 "react-dom": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@coreym/benchmark": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@emotion/core": {
+                    eager: true,
+                    singleton: true,
+                },
+                "@emotion/styled": {
+                    eager: true,
+                    singleton: true,
+                },
+                "emotion-theming": {
                     eager: true,
                     singleton: true,
                 },
