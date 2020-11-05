@@ -1,4 +1,4 @@
-({
+{
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
     "composite": true,
@@ -6,5 +6,4 @@
     "rootDir": "src"
   },
   "include": ["src"]
-},
-"store")
+}
