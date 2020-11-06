@@ -1,6 +1,6 @@
 {
   "name": "@nextgen/fm-toolbar",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
@@ -39,7 +39,7 @@
     "@coreym/benchmark": "^0.1.22",
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
-    "@nextgen/store": "^0.3.0",
+    "@nextgen/store": "^0.5.0",
     "@types/react-redux": "^7.1.11",
     "bundle-loader": "^0.5.6",
     "dotenv": "^8.2.0",
