@@ -6,6 +6,7 @@
   "references": [
     { "path": "fm-assessment-engine" },
     { "path": "fm-item-renderer" },
+    { "path": "item-renderer" },
     { "path": "fm-toolbar" },
     { "path": "store" }
   ]

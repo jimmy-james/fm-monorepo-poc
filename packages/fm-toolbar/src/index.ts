@@ -1,2 +1,2 @@
 void import('./bootstrap');
-// export {};
+export {};

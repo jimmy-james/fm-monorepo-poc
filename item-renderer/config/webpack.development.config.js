@@ -1,13 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require('../../../item-renderer/config/node_modules/mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {
-    ModuleFederationPlugin
-} = require('webpack').container;
 
 module.exports = {
     entry: './src/index',
@@ -16,15 +13,15 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         // with react-router's nested routes, tells html where to find the bundle in dist.
         // This is also needed for module federation. Allowing this module to be seen by other apps.
-        publicPath: 'http://localhost:9003/',
+        publicPath: 'http://localhost:9004/',
     },
     mode: 'development',
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),
-        port: 9003,
+        port: 9004,
         historyApiFallback: {
             // specify this HTML or it defaults to index.html
-            index: '/toolbar.html'
+            index: '/renderer.html'
         },
     },
     module: {
@@ -68,55 +65,12 @@ module.exports = {
             filename: '[name].[contenthash].css'
         }),
         new HtmlWebpackPlugin({
-            title: 'Toolbar',
-            filename: 'toolbar.html',
+            title: 'Renderer',
+            filename: 'renderer.html',
             template: 'public/index.ejs',
             meta: {
-                description: 'Toolbar',
+                description: 'Renderer',
             },
-        }),
-        new ModuleFederationPlugin({
-            name: 'ToolbarApp',
-            library: {
-                type: "var",
-                name: "ToolbarApp"
-            },
-            /**
-             * All other apps will reference this app through a public URL.
-             * Public URL is baked into remoteEntry.js. I can build my app on local, then and copy generated files to CDN.
-             * In build process, webpack doesn't know this, so we have to tell Webpack our publicPath to the correct url to CDN. 
-             */
-            filename: 'remoteEntry.js',
-            exposes: {
-                // module and path to module.
-                './Toolbar': './src/App'
-            },
-            shared: {
-                react: {
-                    eager: true,
-                    singleton: true,
-                },
-                "react-dom": {
-                    eager: true,
-                    singleton: true,
-                },
-                "@coreym/benchmark": {
-                    eager: true,
-                    singleton: true,
-                },
-                "@emotion/core": {
-                    eager: true,
-                    singleton: true,
-                },
-                "@emotion/styled": {
-                    eager: true,
-                    singleton: true,
-                },
-                "emotion-theming": {
-                    eager: true,
-                    singleton: true,
-                },
-            }
         }),
         new webpack.EnvironmentPlugin({
             NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
