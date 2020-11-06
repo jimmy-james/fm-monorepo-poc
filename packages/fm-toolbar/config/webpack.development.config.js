@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require('../../../item-renderer/config/node_modules/mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
