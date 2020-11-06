@@ -1,0 +1,12 @@
+{
+  // ensures we don't pick up the JS files
+  "files": [],
+  /* tsc build everything in packages */
+  // each part must have composite:true
+  "references": [
+    { "path": "fm-assessment-engine" },
+    { "path": "fm-item-renderer" },
+    { "path": "fm-toolbar" },
+    { "path": "store" }
+  ]
+}
