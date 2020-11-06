@@ -80,9 +80,34 @@ module.exports = {
       filename: 'remoteEntry.js',
       exposes: {
         // module and path to module.
-        './Renderer': './src/Renderer'
+        './Renderer': './src/App'
       },
-      shared: ['react', 'react-dom', 'redux', '@coreym/benchmark']
+      shared: {
+        react: {
+          eager: true,
+          singleton: true,
+        },
+        "react-dom": {
+          eager: true,
+          singleton: true,
+        },
+        "@coreym/benchmark": {
+          eager: true,
+          singleton: true,
+        },
+        "@emotion/core": {
+          eager: true,
+          singleton: true,
+        },
+        "@emotion/styled": {
+          eager: true,
+          singleton: true,
+        },
+        "emotion-theming": {
+          eager: true,
+          singleton: true,
+        },
+      }
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined

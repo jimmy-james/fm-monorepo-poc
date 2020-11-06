@@ -7,7 +7,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "scripty",
+    "build": "yarn webpack serve --config ./config/webpack.development.config.js --hot",
     "lint": "scripty",
     "clean": "rimraf dist *.tsbuildinfo",
     "test": "scripty"

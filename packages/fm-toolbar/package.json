@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "scripty",
     "clean": "rimraf dist *.tsbuildinfo",
-    "build": "webpack --config ./config/webpack.config.js",
+    "build": "scripty",
     "dev": "scripty",
     "test": "scripty"
   },
@@ -39,7 +39,7 @@
     "@coreym/benchmark": "^0.1.22",
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
-    "@jimmy-james/store": "^0.3.0",
+    "@nextgen/store": "^0.3.0",
     "@types/react-redux": "^7.1.11",
     "bundle-loader": "^0.5.6",
     "dotenv": "^8.2.0",

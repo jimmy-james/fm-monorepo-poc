@@ -1,19 +1,14 @@
-import { createStore, applyMiddleware, compose, CombinedState, Store } from 'redux';
-import rootReducer from './reducers';
-// import reduxImmutableStateInvariant from 'redux-immutable-state-invariant'; //to ensure no state mutations exist in code in dev mode
-import thunk from 'redux-thunk';
-import { AppState } from './interfaces/AppState';
+import { Store } from 'redux';
 import initialState from './reducers/initialState';
+import actions from './actions';
+import selectors from './selectors';
+import configureStore from './configureStore';
 
-declare global {
-  interface Window {
-    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-  }
+function setup(): Store {
+  const store = configureStore(initialState);
+  return store;
 }
 
-export default function configureStore(initialState: AppState): Store<CombinedState<unknown>> {
-  const composeMiddleware = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-  return createStore(rootReducer, initialState, composeMiddleware(applyMiddleware(thunk)));
-}
+const store = setup();
 
-export { initialState };
+export default { initialState, store, actions, selectors };

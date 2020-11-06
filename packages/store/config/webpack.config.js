@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
     // with react-router's nested routes, tells html where to find the bundle in dist.
-    publicPath: '/',
+    // publicPath: '/',
   },
   optimization: {
     splitChunks: {
